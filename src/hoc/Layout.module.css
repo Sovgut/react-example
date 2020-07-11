@@ -1,0 +1,53 @@
+.layout {
+  display: grid;
+  grid-template-rows: max-content auto;
+  background: whitesmoke;
+  height: 100vh;
+}
+
+.link {
+  list-style: none;
+}
+
+.link > *,
+.link > *:focus,
+.link > *:active,
+.link > *:hover,
+.link > *:visited {
+  text-decoration: none;
+  color: gray;
+  cursor: pointer;
+  padding: 1rem;
+  display: block;
+}
+
+.link:hover > *,
+.link:focus > *,
+.link:focus > *,
+.link:active > * {
+  color: black;
+}
+
+.header {
+  display: flex;
+  box-sizing: border-box;
+}
+
+.header-list {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+}
