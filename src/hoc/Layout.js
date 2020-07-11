@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import styles from "./Layout.module.css"
-import { Link, withRouter } from "react-router-dom"
+import { NavLink, withRouter } from "react-router-dom"
 
 class Layout extends Component {
   _userLogout = () => {
@@ -19,7 +19,9 @@ class Layout extends Component {
 
     return (
       <li className={styles.link}>
-        <Link to="/login">Login</Link>
+        <NavLink exact to="/login" activeClassName={styles.active}>
+          Login
+        </NavLink>
       </li>
     )
   }
@@ -31,10 +33,14 @@ class Layout extends Component {
           <ul className={styles["header-list"]}>
             {this._renderLoginOrLogout()}
             <li className={styles.link}>
-              <Link to="/protected">Protected</Link>
+              <NavLink exact to="/protected" activeClassName={styles.active}>
+                Protected
+              </NavLink>
             </li>
             <li className={styles.link}>
-              <Link to="/">Home</Link>
+              <NavLink exact to="/" activeClassName={styles.active}>
+                Home
+              </NavLink>
             </li>
           </ul>
         </header>

@@ -12,7 +12,7 @@ class App extends Component {
         <Switch>
           <Route path="/login" component={LoginPage} />
           <Route path="/protected" component={ProtectedPage} />
-          <Route path="/" component={HomePage} />
+          <Route path="/" exact component={HomePage} />
           <Redirect to="/" />
         </Switch>
       </BrowserRouter>
